@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Lottie from "lottie-react";
-import projectAnim from "../../assets/lottie/project.json";
+import projectAnim from "../../assets/lottie/Project.json";
 import codingAnim from "../../assets/lottie/coding.json";
 
 const Wrap = styled.section`
