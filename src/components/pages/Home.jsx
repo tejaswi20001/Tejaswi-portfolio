@@ -25,14 +25,17 @@ export default function Home() {
       <Section id="about" title="About">
         <p style={{ opacity: 0.78, lineHeight: 1.8, maxWidth: 820, margin: 0 }}>
           I’m Tejaswi, a Software Engineer with 3 years of experience in a
-          software consulting firm, building web applications across frontend
-          and backend. For my first 2 years, I worked on a client project for a
-          job recruiting platform, where I built reusable React components,
-          implemented responsive UI, integrated backend data, and handled
-          loading/error/empty states to improve user experience. There after, I
-          switched to another client project for an online tools website, where
-          I worked as a Backend Developer building REST APIs and working with
-          PostgreSQL to support reliable data flow for product features.
+          software consulting firm, working across frontend and backend on
+          multiple client projects. In my first year, I contributed to a job
+          recruiting platform where I built reusable React components,
+          implemented responsive UI, integrated API data, and handled
+          loading/error/empty states for a smooth user experience. In my second
+          year, I worked on a hotel booking website, improving key UI flows,
+          enhancing usability, and collaborating with backend teams to deliver
+          reliable features. After that, I transitioned into backend development
+          for an online tools platform, building REST APIs with Node/Express and
+          working with PostgreSQL to support scalable data flow and product
+          features.
         </p>
 
         <p style={{ opacity: 0.7, marginTop: 14 }}>

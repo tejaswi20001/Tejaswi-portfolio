@@ -8,6 +8,7 @@ export const skills = [
       "JavaScript",
       "HTML5",
       "CSS3",
+      "Next.js",
       "Responsive UI",
       "Bootstrap",
       "TypeScript",
@@ -83,17 +84,29 @@ export const experience = [
     ],
   },
   {
+    role: "Software Engineer (Frontend Developer — Client Project)",
+    company: "Taj Hotel",
+    duration: "1 year",
+    link: "https://www.tajhotels.com/en-in",
+    points: [
+      "Built responsive, reusable UI components using React, JavaScript, HTML, CSS, and Bootstrap (hotel cards, filters, modals, tabs/accordion), ensuring layouts worked across mobile, tablet, and desktop.",
+      "Connected UI to REST APIs and handled real user states like loading (skeleton/spinner), no results, and error messages, along with common interactions like search, filters, and sorting.",
+      "Improved UI quality using semantic HTML and basic accessibility (keyboard navigation for menus/modals), and implemented responsive patterns like sticky panels, off-canvas filters, and collapsible sections.",
+    ],
+    tech: ["React", "JavaScript", "HTML", "CSS", "Bootstrap", "REST API"],
+  },
+  {
     role: "Software Engineer (Backend Developer — Client Project)",
     company: "ToolX",
     duration: "1 year",
     link: "https://www.toolsx.site/",
     points: [
-      "Developed REST APIs in Node/Express to support product features and frontend integration.",
-      "Worked with PostgreSQL to manage application data and write efficient queries as needed.",
-      "Validated requests and improved reliability by debugging and fixing API issues.",
-      "Partnered with frontend devs to ensure correct data flow and smooth UI behavior.",
+      "Built backend APIs using Node.js and Express to support the full flow of uploading a file → converting it → downloading the result.",
+      "Integrated third-party conversion APIs (PDF/doc/image) and handled real cases like async processing, input validation, timeouts, retries, and clear error messages when conversions fail.",
+      "Improved file-handling safety by adding file type/size checks, generating unique job IDs, and cleaning up temporary files after conversion to manage storage.",
+      "Improved reliability with production practices like rate limiting, structured logging, and centralized error-handling middleware to simplify debugging.",
     ],
 
-    tech: ["Node.js", "Express.js", "PostgreSQL", "SQL", "REST API"],
+    tech: ["Node.js", "Express.js", "Third Party APIs"],
   },
 ];
