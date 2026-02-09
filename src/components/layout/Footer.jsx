@@ -34,7 +34,7 @@ export default function Footer() {
   return (
     <Wrap>
       <Inner>
-        <Text>© {new Date().getFullYear()} Mike. Built with React.</Text>
+        <Text>© {new Date().getFullYear()} Tejaswi. Built with React.</Text>
         <Top href="#home">Back to top ↑</Top>
       </Inner>
     </Wrap>

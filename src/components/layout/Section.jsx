@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 const Wrap = styled.section`
-  scroll-margin-top: 90px; /* sticky navbar offset */
-  padding: 70px 0 50px;
-  /* consistent section spacing */
+  padding: 50px 0;
+
+  @media (max-width: 900px) {
+    padding: 44px 0;
+  }
 `;
 
 const Inner = styled.div`
@@ -11,30 +13,33 @@ const Inner = styled.div`
   margin: 0 auto;
 `;
 
-const Heading = styled.h2`
-  margin: 0 0 12px;
+const Title = styled.h2`
+  margin: 0 0 16px;
   font-size: 34px;
-  letter-spacing: -0.6px;
-  line-height: 1.15;
-  color: rgba(255, 255, 255, 0.92);
+  font-weight: 900;
+  letter-spacing: -0.4px;
 
-  /* subtle underline accent */
-  display: inline-block;
-  position: relative;
+  @media (max-width: 900px) {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+`;
 
-  &::after {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 100%;
-    max-width: 90px; /* ✅ consistent underline size */
-    margin-top: 8px;
-    border-radius: 999px;
-    background: rgba(34, 211, 238, 0.55);
+const Underline = styled.div`
+  width: 64px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.75);
+  margin-top: 10px;
+`;
+
+const Content = styled.div`
+  p {
+    margin: 0 0 12px;
   }
 
-  @media (max-width: 720px) {
-    font-size: 28px;
+  ul {
+    margin: 0;
   }
 `;
 
@@ -42,8 +47,12 @@ export default function Section({ id, title, children }) {
   return (
     <Wrap id={id}>
       <Inner>
-        <Heading>{title}</Heading>
-        {children}
+        <Title>
+          {title}
+          <Underline />
+        </Title>
+
+        <Content>{children}</Content>
       </Inner>
     </Wrap>
   );
