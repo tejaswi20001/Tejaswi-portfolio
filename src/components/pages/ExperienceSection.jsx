@@ -108,7 +108,7 @@ const Tag = styled.span`
 export default function ExperienceSection() {
   return (
     <Wrap>
-      {experience.map((e, idx) => (
+      {experience.map((e) => (
         <Item key={`${e.company}-${e.role}`}>
           <Line />
           <Dot />

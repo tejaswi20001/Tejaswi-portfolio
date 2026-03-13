@@ -6,6 +6,7 @@ export const skills = [
     items: [
       "React",
       "JavaScript",
+      "TypeScript",
       "HTML5",
       "CSS3",
       "Next.js",
@@ -17,15 +18,15 @@ export const skills = [
   },
   {
     title: "Backend",
-    items: ["Node.js", "Express.js", "REST APIs"],
+    items: ["Node.js", "Express.js", "REST APIs", "Python"],
   },
   {
     title: "Database",
-    items: ["PostgreSQL", "SQL"],
+    items: ["PostgreSQL", "SQLite", "MongoDB"],
   },
   {
     title: "Tools",
-    items: ["Git", "GitHub", "Vercel/Netlify", "Postman"],
+    items: ["Git", "GitHub", "Vercel/Netlify", "Postman", "Render"],
   },
 ];
 
