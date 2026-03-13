@@ -4,6 +4,21 @@ import { skills } from "../data/PortfolioData";
 // Flatten your skills into a single list of items
 const allSkills = skills.flatMap((group) => group.items);
 
+const skillColors = [
+  "#67e8f9", // cyan
+  "#a78bfa", // violet
+  "#f472b6", // pink
+  "#facc15", // yellow
+  "#4ade80", // green
+  "#fb923c", // orange
+  "#38bdf8", // sky
+  "#c084fc", // purple
+  "#22d3ee", // teal-cyan
+  "#f87171", // red
+  "#2dd4bf", // teal
+  "#fde047", // soft yellow
+];
+
 const scroll = keyframes`
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -43,11 +58,8 @@ const Track = styled.div`
   width: max-content;
   gap: 14px;
   padding: 14px;
-  faster: 16s;
-  slower: 30s;
   animation: ${scroll} 22s linear infinite;
 
-  /* pause on hover like Abu Said */
   ${Wrap}:hover & {
     animation-play-state: paused;
   }
@@ -89,15 +101,13 @@ const SkillCard = styled.div`
 const SkillText = styled.div`
   font-weight: 800;
   font-size: 14px;
-  opacity: 0.92;
+  color: ${({ color }) => color};
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.08);
 `;
 
 export default function SkillsMarquee() {
-  // Duplicate list to create seamless loop
   const loop = [...allSkills, ...allSkills];
 
-  // Split into two identical rows inside Track (Row1 + Row2) for better layout control
-  // We animate Track left by -50% which equals one copy’s width.
   const half = loop.length / 2;
   const first = loop.slice(0, half);
   const second = loop.slice(half);
@@ -111,7 +121,9 @@ export default function SkillsMarquee() {
         <Row>
           {first.map((name, idx) => (
             <SkillCard key={`${name}-${idx}`}>
-              <SkillText>{name}</SkillText>
+              <SkillText color={skillColors[idx % skillColors.length]}>
+                {name}
+              </SkillText>
             </SkillCard>
           ))}
         </Row>
@@ -119,7 +131,9 @@ export default function SkillsMarquee() {
         <Row aria-hidden="true">
           {second.map((name, idx) => (
             <SkillCard key={`${name}-dup-${idx}`}>
-              <SkillText>{name}</SkillText>
+              <SkillText color={skillColors[idx % skillColors.length]}>
+                {name}
+              </SkillText>
             </SkillCard>
           ))}
         </Row>

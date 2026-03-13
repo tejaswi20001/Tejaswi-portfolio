@@ -1,15 +1,39 @@
 import { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const gradientShift = keyframes`
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+`;
 
 const NavWrap = styled.header`
   position: sticky;
   top: 0;
   z-index: 50;
 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background: rgba(11, 18, 32, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  background: linear-gradient(
+    120deg,
+    rgba(11, 18, 32, 0.88),
+    rgba(20, 30, 48, 0.82),
+    rgba(29, 78, 216, 0.16),
+    rgba(124, 58, 237, 0.14),
+    rgba(11, 18, 32, 0.88)
+  );
+  background-size: 250% 250%;
+  animation: ${gradientShift} 12s ease infinite;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
 `;
 
 const NavInner = styled.div`
@@ -26,6 +50,16 @@ const Brand = styled.a`
   font-weight: 900;
   letter-spacing: 0.6px;
   font-size: 15px;
+  text-decoration: none;
+  color: #67e8f9;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    color: #a5f3fc;
+    transform: translateY(-1px);
+  }
 `;
 
 const Links = styled.nav`
@@ -40,11 +74,18 @@ const Links = styled.nav`
 
 const NavLink = styled.a`
   font-size: 14px;
-  opacity: 0.8;
-  transition: 0.2s;
+  text-decoration: none;
+  color: #cbd5e1;
+  opacity: 0.9;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
 
   &:hover {
+    color: #93c5fd;
     opacity: 1;
+    transform: translateY(-1px);
   }
 `;
 
@@ -53,6 +94,8 @@ const ResumeBtn = styled.a`
   border-radius: 12px;
   font-size: 14px;
   font-weight: 800;
+  text-decoration: none;
+  color: #dbeafe;
 
   background: rgba(59, 130, 246, 0.18);
   border: 1px solid rgba(59, 130, 246, 0.35);
@@ -61,6 +104,7 @@ const ResumeBtn = styled.a`
   &:hover {
     transform: translateY(-1px);
     background: rgba(59, 130, 246, 0.24);
+    color: #ffffff;
   }
 `;
 
@@ -75,13 +119,19 @@ const Burger = styled.button`
 
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.05);
-  color: rgba(255, 255, 255, 0.9);
+  color: #c4b5fd;
   border-radius: 12px;
   padding: 10px 12px;
   cursor: pointer;
+  transition: 0.2s ease;
+
+  &:hover {
+    color: #ddd6fe;
+    border-color: rgba(196, 181, 253, 0.28);
+    background: rgba(196, 181, 253, 0.08);
+  }
 `;
 
-/* ✅ Clean dropdown (no big cards) */
 const MobileMenu = styled.div`
   display: none;
 
@@ -94,7 +144,7 @@ const MobileMenu = styled.div`
   right: 0;
   top: 70px;
 
-  background: rgba(11, 18, 32, 0.92);
+  background: rgba(11, 18, 32, 0.94);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -117,7 +167,9 @@ const MobileInner = styled.div`
 const MobileLink = styled.a`
   padding: 10px 2px;
   font-size: 14px;
-  opacity: 0.92;
+  text-decoration: none;
+  color: #e2e8f0;
+  opacity: 0.94;
   transition: 0.18s;
 
   display: flex;
@@ -125,6 +177,7 @@ const MobileLink = styled.a`
   align-items: center;
 
   &:hover {
+    color: #7dd3fc;
     opacity: 1;
     transform: translateX(2px);
   }

@@ -16,6 +16,26 @@ const PageBG = styled.div`
   position: relative;
 `;
 
+const AboutText = styled.p`
+  color: #cbd5e1;
+  line-height: 1.85;
+  max-width: 820px;
+  margin: 0;
+  font-size: 15.5px;
+`;
+
+const TechText = styled.p`
+  margin-top: 14px;
+  color: #c4b5fd;
+  font-size: 14px;
+  font-weight: 600;
+`;
+
+const TechAccent = styled.span`
+  color: #22d3ee;
+  font-weight: 700;
+`;
+
 export default function Home() {
   return (
     <PageBG>
@@ -23,25 +43,23 @@ export default function Home() {
       <Hero />
 
       <Section id="about" title="About">
-        <p style={{ opacity: 0.78, lineHeight: 1.8, maxWidth: 820, margin: 0 }}>
-          I’m Tejaswi, a Software Engineer with 3 years of experience in a
-          software consulting firm, working across frontend and backend on
-          multiple client projects. In my first year, I contributed to a job
-          recruiting platform where I built reusable React components,
-          implemented responsive UI, integrated API data, and handled
-          loading/error/empty states for a smooth user experience. In my second
-          year, I worked on a hotel booking website, improving key UI flows,
-          enhancing usability, and collaborating with backend teams to deliver
-          reliable features. After that, I transitioned into backend development
-          for an online tools platform, building REST APIs with Node/Express and
-          working with PostgreSQL to support scalable data flow and product
-          features.
-        </p>
+        <AboutText>
+          I’m Tejaswi, a Software Engineer with 3 years of experience developing
+          modern web applications across both frontend and backend technologies.
+          My work has included building reusable React components, creating
+          responsive and user-friendly interfaces, integrating APIs, and
+          developing backend services with Node.js, Express, and PostgreSQL. I
+          have also built multiple personal MERN stack projects to further
+          expand my full-stack development skills. In addition, I have strong
+          knowledge of data structures, algorithms, and core software
+          engineering principles, which I apply to build clean, reliable, and
+          scalable applications.
+        </AboutText>
 
-        <p style={{ opacity: 0.7, marginTop: 14 }}>
-          Tech: React • JavaScript • HTML • CSS • CSS-in-JS • Bootstrap •
-          Node.js • Express • PostgreSQL
-        </p>
+        <TechText>
+          <TechAccent>Tech Stack:</TechAccent> React • JavaScript • HTML • CSS •
+          CSS-in-JS • Bootstrap • Node.js • Express • PostgreSQL
+        </TechText>
       </Section>
 
       <Section id="skills" title="Skills">

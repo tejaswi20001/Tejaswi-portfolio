@@ -28,7 +28,6 @@ const Dot = styled.div`
   width: 14px;
   height: 14px;
   border-radius: 999px;
-
   background: rgba(59, 130, 246, 0.9);
   box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.12);
 `;
@@ -62,31 +61,27 @@ const TopRow = styled.div`
 const Role = styled.div`
   font-weight: 900;
   font-size: 16px;
+  color: #f8fafc;
 `;
 
-const Company = styled.a`
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-  opacity: 0.8;
-  font-size: 14px;
+const Company = styled.div`
   margin-top: 6px;
-
-  &:hover {
-    opacity: 1;
-  }
+  font-size: 14px;
+  font-weight: 700;
+  color: #38bdf8;
 `;
 
 const Duration = styled.div`
-  opacity: 0.7;
   font-size: 14px;
+  font-weight: 600;
+  color: #c084fc;
 `;
 
 const List = styled.ul`
   margin: 14px 0 0;
   padding-left: 18px;
-  opacity: 0.82;
-  line-height: 1.7;
+  color: #cbd5e1;
+  line-height: 1.75;
 `;
 
 const TechRow = styled.div`
@@ -98,11 +93,12 @@ const TechRow = styled.div`
 
 const Tag = styled.span`
   font-size: 12px;
+  font-weight: 600;
   padding: 7px 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  opacity: 0.9;
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(96, 165, 250, 0.2);
 `;
 
 export default function ExperienceSection() {
@@ -116,9 +112,7 @@ export default function ExperienceSection() {
             <TopRow>
               <div>
                 <Role>{e.role}</Role>
-                <Company href={e.link} target="_blank" rel="noreferrer">
-                  {e.company} <span style={{ opacity: 0.7 }}>↗</span>
-                </Company>
+                <Company>{e.company}</Company>
               </div>
               <Duration>{e.duration}</Duration>
             </TopRow>
