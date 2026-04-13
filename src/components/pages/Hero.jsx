@@ -224,12 +224,14 @@ export default function Hero() {
 
           <Subtitle>
             Software Engineer with 3 years of experience building scalable web
-            applications across frontend and backend development. Skilled in
-            developing reusable React components, responsive user interfaces,
-            and backend APIs using Node.js, Express, and PostgreSQL. Currently
+            applications across both frontend and backend systems. Skilled in
+            developing reusable React components, creating responsive user
+            interfaces, and building robust backend APIs using Node.js, Express,
+            MongoDB, and PostgreSQL. Strong focus on writing clean, maintainable
+            code and delivering reliable, user-centric solutions. Currently
             seeking Software Engineer, Frontend Engineer, or Full-Stack
-            Developer roles where I can contribute to building reliable,
-            user-focused, and maintainable products.
+            Developer roles where I can contribute to building high-quality,
+            scalable products.
           </Subtitle>
 
           <CTA>

@@ -46,12 +46,12 @@ export default function Home() {
         <AboutText>
           I’m Tejaswi, a Software Engineer with 3 years of experience developing
           modern web applications across both frontend and backend technologies.
-          My work has included building reusable React components, creating
-          responsive and user-friendly interfaces, integrating APIs, and
-          developing backend services with Node.js, Express, and PostgreSQL. I
-          have also built multiple personal MERN stack projects to further
-          expand my full-stack development skills. In addition, I have strong
-          knowledge of data structures, algorithms, and core software
+          My experience includes building reusable React components, creating
+          responsive and user-friendly interfaces, integrating RESTful APIs, and
+          developing backend services using Node.js, Express, and PostgreSQL. I
+          have also built personal MERN stack projects to further strengthen my
+          full-stack development skills. Additionally, I have a strong
+          foundation in data structures, algorithms, and core software
           engineering principles, which I apply to build clean, reliable, and
           scalable applications.
         </AboutText>
